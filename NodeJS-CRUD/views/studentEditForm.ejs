@@ -1,0 +1,70 @@
+<%- include('./partials/header.ejs') %>
+<div class="container">
+  <h1 class="p-3 text-center">Edit Student Form</h1>
+
+  <!--Form input-->
+  <form action="/api/students/form/edit/<%= data._id %>" method="POST">
+    <div class="form-group">
+      <label for="exampleInputEmail1" class="font-italic">Student Name</label>
+      <input
+        type="text"
+        name="name"
+        class="form-control"
+        id="exampleInputEmail1"
+        value="<%= data.name %>"
+        placeholder="<%= data.name %>"
+      />
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1" class="font-italic">Student Age</label>
+      <input
+        type="number"
+        name="age"
+        class="form-control"
+        id="exampleInputEmail1"
+        value="<%= data.age %>"
+        placeholder="<%= data.age %>"
+      />
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1" class="font-italic">Math Score</label>
+      <input
+        type="number"
+        name="math"
+        class="form-control"
+        id="exampleInputEmail1"
+        value="<%= data.math %>"
+        placeholder="<%= data.math %>"
+      />
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1" class="font-italic">Physics Score</label>
+      <input
+        type="number"
+        name="physics"
+        class="form-control"
+        id="exampleInputEmail1"
+        value="<%= data.physics %>"
+        placeholder="<%= data.physics %>"
+      />
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1" class="font-italic"
+        >Chemistry Score</label
+      >
+      <input
+        type="number"
+        name="chemistry"
+        class="form-control"
+        id="exampleInputEmail1"
+        value="<%= data.chemistry %>"
+        placeholder="<%= data.chemistry %>"
+      />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <a href="/api/students/" class="btn btn-danger">Cancel</a>
+  </form>
+</div>
+
+<%- include('./partials/footer.ejs') %>
